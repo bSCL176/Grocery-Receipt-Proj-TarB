@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="CashCalcuTB.css">
+<script src="cashierTB.js"></script>
+<style>
+  * {
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body onload="myDisplayDateTime()">
+
+<h2 style="text-align:center">Cash Calculator</h2>  
+<h2 style="text-align:center">International Store of Alberta</h2>
+
+<div class="columns">
+  <ul class="priceH">
+    <li class="header" style="text-align:center">Admin</li></br>
+    <tr>Add a new product</tr> </br></br>
+   
+        <input id="productName" type="text" placeholder="Product name" name="productName" required>
+        
+        <button class="button" onclick="addingItem()"> <a href="#" >Add Product</a></button>
+
+        </br></br>
+        </br></br>
+    <p>Select a product and then add price per unit</p> </br></br>
+       <div class="pricePerUnit">
+           <select name="prod" id="firstSelect">
+             
+          </select>
+          <input id="price" type="text" placeholder="Price" name="uname" required></br></br>
+          <button id="addPrice" type="button" onclick="addPriceOfProduct()"> <a href="#" >Add Price</a></button>
+          </br></br> </br> </br>
+       </div> 
+      
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="priceH">
+    <li class="header" style="background-color:#4CAF50; text-align: center;">Checkout</li></br>
+        <div class="unitAdding">
+            <button style= "box-align:center;" class="grey1" class="trans" onclick="reset()" type="button"><a href="#" >New Transaction</a></button>
+            </br></br>
+        
+            <p>Select a product and then type number of units</p> </br></br>
+            <div class="numSelButtons">
+                  <div class="selAndCart">
+                      <select name="prod"  id="secondSelect"> </br></br>
+
+                      </select>
+                      <div class="addtocart">
+                            <button class="button" onclick="addToCart()"> <a href="#" >Add To Cart</a></button>
+                      </div>
+                  </div>
+                  <div class="nineButtons">
+                          <div>
+                            <button onclick="addUnitsToProduct1()" value="1" type="button">1</button>
+                            <button onclick="addUnitsToProduct2()" value="2" type="button">2</button>
+                            <button onclick="addUnitsToProduct3()" value="3" type="button">3</button>
+                          </div>
+                          <div>
+                            <button onclick="addUnitsToProduct4()" value="4" type="button">4</button>
+                            <button onclick="addUnitsToProduct5()" value="5" type="button">5</button>
+                            <button onclick="addUnitsToProduct6()" value="6" type="button">6</button>
+                          </div>
+                          <div>
+                            <button onclick="addUnitsToProduct7()" value="7" type="button">7</button>
+                            <button onclick="addUnitsToProduct8()" value="8" type="button">8</button>
+                            <button onclick="addUnitsToProduct9()" value="9" type="button">9</button>
+                          </div>
+                          <div>
+                          <button onclick="addUnitsToProduct0()" value="0" type="button">0</button>
+                          </div>
+      </br> </br>
+      </div>
+                      <div class="amtDue">
+                             
+                             <button class="button" onclick="amtDue()" style="background-color:red"> <a href="#" >Amount Due</a></button>
+                      </div>
+                     
+  </ul>
+              
+            </div>
+            
+
+        </div>
+      
+
+    
+  </ul>
+ 
+</div>
+
+
+
+<div class="columns">
+  <ul class="priceH">
+    <li class="header"; style="text-align: center;">Receipt</li></br>
+
+  
+            <div >
+                  <table  id="thisTable" style="width:100%"> 
+                     
+                      <thead>
+                          <tr>
+                              <th id="date"></th> </br>
+                          </tr> 
+                     
+                          <tr> 
+                              <th id="time"></th> </br>
+                          </tr> 
+                   
+                           <tr style="text-align: auto"> Recipt#: 34890 </tr></br></br>
+                                <tr>
+                                      <th>Product</th>
+                                      <th>Price/unit</th>
+                                      <th>Units</th>
+                                      <th>Price</th>
+                                </tr>
+
+                       </thead>
+                       <tbody>
+                         
+                       </tbody>
+                       <tfoot>
+                            <tr>
+                                <td colspan="4" id="totalPrice">Total Price:</td>
+                            </tr>
+                            <tr>
+                                 <td colspan="4" id="totalTax">Taxes:</td>
+                            </tr>
+                            
+                            <tr>
+                                 <td colspan="4" id="totalAmt">Amount Due:</td>
+                            </tr>
+
+                       </tfoot>
+
+                    </table>
+                  
+                       
+
+    
+
+              </div>
+    
+  </ul>
+</div>
+
+</body>
+</html>
